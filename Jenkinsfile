@@ -3,6 +3,12 @@ pipeline {
 
     stages {
 
+        stage('Check Files') {
+            steps {
+                sh 'ls -l'
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t html-app .'
