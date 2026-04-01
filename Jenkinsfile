@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "shubhkadam33/html-app"
+        IMAGE_NAME = "shubhkadam33/html-app:${BUILD_NUMBER}"
         DOCKER_CREDENTIALS = "docker-hub-cred"
     }
 
