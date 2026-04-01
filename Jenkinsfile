@@ -40,8 +40,8 @@ pipeline {
 
         stage('Deploy to Kubernetes') {
             steps {
-                sh '''kubectl apply -f deployment.yaml'
-                    kubectl set image deployment/html-app html-app=$IMAGE_NAME --record
+                sh ''' kubectl apply -f deployment.yaml'
+                       kubectl set image deployment/html-app html-app=$IMAGE_NAME --record
                 '''
             }
         }
